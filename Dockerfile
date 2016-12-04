@@ -11,12 +11,12 @@ RUN apt-get install -y bzr
 RUN pip install pylhe
 
 RUN mkdir /code
-RUN chown main:main /code
+RUN chown -R main:main /code
 
 ### INSTALL MADGRAPH
 USER main
 WORKDIR /code
 RUN bzr branch lp:~maddevelopers/mg5amcnlo/2.3.3 madgraph-2.3.3
-RUN ln -s $PWD/madgraph-2.3.3/bin/mg5_aMC /usr/local/bin && \
-    ln -s $PWD/madgraph-2.3.3/bin/mg5 /usr/local/bin
+
+ENV PATH=$PWD/madgraph-2.3.3:$PATH
 
