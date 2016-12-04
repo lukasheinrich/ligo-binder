@@ -7,14 +7,16 @@ RUN apt-get install --yes g++ cpp gcc gfortran git dpkg-dev make binutils libx11
                               libfftw3-dev graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python-dev \
                               libxml2-dev libkrb5-dev libgsl0-dev libqt4-dev libx11-dev libxpm-dev
 RUN apt-get install -y bzr
-RUN mkdir /code
 
+RUN pip install pylhe
+
+RUN mkdir /code
+RUN chown main:main /code
 
 ### INSTALL MADGRAPH
-
+USER main
 WORKDIR /code
 RUN bzr branch lp:~maddevelopers/mg5amcnlo/2.3.3 madgraph-2.3.3
 RUN ln -s $PWD/madgraph-2.3.3/bin/mg5_aMC /usr/local/bin && \
     ln -s $PWD/madgraph-2.3.3/bin/mg5 /usr/local/bin
 
-RUN pip install pylhe
