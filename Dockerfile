@@ -18,5 +18,5 @@ USER main
 WORKDIR /code
 RUN bzr branch lp:~maddevelopers/mg5amcnlo/2.3.3 madgraph-2.3.3
 
-ENV PATH $PWD/madgraph-2.3.3:$PATH
+ENV PATH /code/madgraph-2.3.3:$PATH
 
