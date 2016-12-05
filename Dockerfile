@@ -23,3 +23,15 @@ WORKDIR /code
 RUN bzr branch lp:~maddevelopers/mg5amcnlo/2.3.3 madgraph-2.3.3
 
 ENV PATH /code/madgraph-2.3.3/bin:$PATH
+
+ADD yadage_widget.py yadage_widget.py
+ADD manualui.py manualui.py
+
+USER root
+RUN apt-get install -y autoconf
+RUN pip install -I --upgrade setuptools
+RUN pip install yadage
+RUN pip install --upgrade ipywidgets
+RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
+
+USER main
