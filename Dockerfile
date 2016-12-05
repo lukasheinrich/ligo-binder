@@ -9,6 +9,10 @@ RUN apt-get install --yes g++ cpp gcc gfortran git dpkg-dev make binutils libx11
 RUN apt-get install -y bzr
 
 RUN pip install pylhe
+RUN pip install adage
+RUN apt-get install -y graphviz graphviz-dev imagemagick
+RUN pip install jsonlines
+
 
 RUN mkdir /code
 RUN chown -R main:main /code
@@ -19,4 +23,3 @@ WORKDIR /code
 RUN bzr branch lp:~maddevelopers/mg5amcnlo/2.3.3 madgraph-2.3.3
 
 ENV PATH /code/madgraph-2.3.3/bin:$PATH
-
