@@ -1,7 +1,0 @@
-FROM lukasheinrich/generic_madgraphpythiadelphes_base
-RUN yum install -y nano
-RUN curl -s https://bootstrap.pypa.io/get-pip.py | python
-RUN pip install click pyyaml
-COPY . /analysis
-WORKDIR /analysis
-RUN cd pythia_main && make
