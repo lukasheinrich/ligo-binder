@@ -3,7 +3,7 @@
 
 by [Kyle Cranmer](https://github.com/cranmer) and [Lukas Heinrich](https://github.com/lukasheinrich)
 
-An example notebook on how to generate simulated high energy physics collision events using the generator package MadGraph. Simulated datasets obtained from this notebook can then be used to train and evalueate the performance generative models for physics.
+An example notebook on how to generate simulated high energy physics collision events using the generator package MadGraph. Simulated datasets obtained from this notebook can then be used to train and evaluate the performance of generative models for physics.
 
 ### Usage:
 
