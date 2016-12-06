@@ -7,7 +7,7 @@ An example notebook on how to generate simulated high energy physics collision e
 
 ### Usage:
 
-This repository has been equipped with a Dockerfile to encapsulate its software environment. It can be used with the (http://mybinder.org) service to launch an ephemeral jupyter notebook server to run the notebook.
+This repository has been equipped with a Dockerfile to encapsulate its software environment. It can be used with the [mybinder](http://mybinder.org) service to launch an ephemeral jupyter notebook server to run the notebook.
 
 Click on the below badge and open the notebook `adage.ipynb`.
 
